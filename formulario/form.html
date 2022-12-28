@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- scripts -->
+    <!-- frameworks -->
+    <script src="js/jquery/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery/jquery.validate.min.js"></script>
+    <script src="js/jquery/additional-methods.min.js"></script>
+    <script src="localization/messages_pt_BR.min.js"></script>
+    <script src="js/jquery/jquery.mask.min.js"></script>
+    <!-- frameworks -->
+    <!-- meus scripts -->
+    <script src="js/myValidations.js"></script>
+    <script src="/js/meusMetodos.js"></script>
+    <script src="js/endereco.js"></script>
+    <script src="js/myMask.js"></script>
+    <!-- meus scripts -->
+     <!-- scripts -->
+    
+</head>
+<body>
+
+    <main>
+
+        <div class="container">
+
+            <h2>Não encontrou oque procurava? </h2>
+            <h2>Preencha o formulário e retornaremos o contato.</h2>
+
+            <form action="" id="formulario" >
+                <!-- nome -->
+                <section class="nome_wraper">
+                    <label for="primeiro_nome">Nome*:</label>
+                    <input type="text" id="primeiro_name" name="nome" placeholder="digite seu nome" >
+                </section>
+                <!-- sobrenome -->
+                <section class="sobrenome_wraper">
+                    <label for="segundo_name">Sobrenome*:</label>
+                    <input type="text" id="segundo_name" name="sobrenome" placeholder="digite seu sobrenome" >
+                </section>
+                <!-- email -->
+                <section class="email_wraper">
+                    <label for="email">Email*:</label>
+                    <input type="email" id="email_id" name="email"  placeholder="digite seu email ">
+                </section>
+                <!-- telefone -->
+                <section class="telefone_wraper">
+                    <label for="telefone">Telefone*:</label>
+                    <input type="tel" id="telefone_id" name="telefone"  placeholder="(00) 0000-0000" >
+                </section>
+                <!-- data de nascimento -->
+                <section class="data_wraper">
+                    <label for="data_de_nascimento">Data de nascimento*:</label>
+                    <input type="text" name="data" id="data_de_nascimento" placeholder="dia/mês/ano" >
+                </section>
+                <!-- endereço -->
+                <section class="endereco">
+                    <select id="cidade_id" name="cidade" onchange="selectBairros(this.value)">
+                        <option value="">Selecione o Estado</option>
+                        <option value="SJC">São José dos Campos</option>
+                        <option value="CAÇAP">caçapava</option>
+                    </select>
+                    <select name="bairros" id="bairros_id"></select>
+                </section>
+                <!-- permissão de contato  por telefone-->
+                <section class="permission">
+                    <h3 >Autoriza contato por telefone*</h3>
+                   
+                    <label for="sim">sim</label>
+                    <input  type="radio" name="permission" id="sim" value="sim">
+                    
+                    <label for="nao">nao</label>
+                    <input  type="radio" name="permission" id="nao" value="nao">
+                    
+                </section>
+                <!-- horario de resposta -->
+                <section class="horario_de_resposta">
+                    <p>Daremos a resposta em horario comercial, da 9hrs as 19hrs</p>
+                </section>
+
+            
+                <!-- enviar fomulario -->
+                <section class="enviar">
+                    <input type="submit" value="Enviar">
+                </section>
+
+            </form>
+
+        </div>
+
+
+    </main>
+    
+    
+    
+</body>
+</html>

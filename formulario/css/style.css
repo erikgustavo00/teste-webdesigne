@@ -1,0 +1,155 @@
+/* resets */
+*{
+    margin: 0;
+    border: 0;
+
+    box-sizing:border-box;
+
+    font-family: 'Poppins', sans-serif;
+
+}
+/* * */
+html,body{height: 100%;}
+
+/* mensagem de erro */
+input.error{
+    border:1px solid red !important;
+}    
+label.error{
+    width: 100%;
+    padding:0;
+
+    color: red;
+
+    float: left;
+    
+}
+/* * */
+
+/* main */
+main{
+    background-color: #ff9800;
+
+    width: 100%;
+    min-height: 100%;
+     
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+/* * */
+
+/* container */
+.container{
+    background-color:  #fff2df;
+
+    max-width:968px;
+    width: 100%;
+
+    margin: 0 auto;
+    
+}
+/* * */
+
+/* h2 */
+h2{
+    text-align: center;
+    margin: 20px ;
+}
+/* * */
+
+/* começa o form */
+form{
+    
+    width: 100%;
+    min-height: 650px;
+    padding:  50px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    
+}
+
+/* section */
+form section{
+    width: 49%;
+    margin:  10px 0;
+}
+
+/* label */
+form label{
+    margin-left: 18px;
+}
+
+/* input todos menos input radios */
+form section input:not(input[type=radio]){
+    width: 100%;
+    
+    
+    border-radius: 38px;
+    padding: 15px 30px ;
+
+    outline: 0;
+}
+
+/* focus */
+form section input:focus{
+    border-bottom:2px solid #00385d ;
+
+}
+
+/* input submit */
+form .enviar{
+    width: 100%;
+    height:68px;
+}
+
+form input[type=submit]{
+    background-color: #00385d;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* permissão */
+.permission{padding-left: 20px;}
+
+/* endereço */
+.endereco{padding: 25px 0;}
+    
+/* todos select */
+.endereco select{
+    background-color: #ffff;
+    display: inline-block;
+
+    width: 49%;
+    min-height: 50px;
+
+    
+    border-radius: 50px;
+    padding: 20px;
+}
+
+/* responsivo */
+
+@media screen and (max-width:850px) {
+    
+    .endereco select{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    
+}
+@media screen and (max-width:850px){
+    form{
+        flex-direction: column;
+    }
+    form section {
+        width: 100%;
+    }
+}
